@@ -1,33 +1,39 @@
+import java.util.ArrayList;
+import java.util.Random;
+public final class Zak {
+    private ArrayList<Blokje> zakje;
 
-/**
- * class Zak - geef hier een beschrijving van deze class
- *
- * @author (jouw naam)
- * @version (versie nummer of datum)
- */
-public class Zak
-{
-    // instance variables - vervang deze door jouw variabelen
-    private int x;
-
-    /**
-     * Constructor voor objects van class Zak
-     */
     public Zak()
     {
-        // geef de instance variables een beginwaarde
-        x = 0;
+        zakje = new ArrayList<Blokje>();
+        maakBlokjesAan();
     }
 
-    /**
-     * Voorbeeld van een method - schrijf hier jouw comment
-     *
-     * @param  y    deze method krijgt deze parameter mee in de aanroep
-     * @return    deze method geeft de som van x en y terug
-     */
-    public int voorbeeldMethod(int y)
+    public void maakBlokjesAan()
     {
-        // schrijf hier jouw code
-        return x + y;
+        for (int i = 1; i <= 13; i++)
+        {
+            zakje.add(new Blokje(i, Kleur.BLAUW, false));
+            zakje.add(new Blokje(i, Kleur.BLAUW, false));
+            zakje.add(new Blokje(i, Kleur.ROOD, false));
+            zakje.add(new Blokje(i, Kleur.ROOD, false));
+            zakje.add(new Blokje(i, Kleur.ZWART, false));
+            zakje.add(new Blokje(i, Kleur.ZWART, false));
+            zakje.add(new Blokje(i, Kleur.GEEL, false));
+            zakje.add(new Blokje(i, Kleur.GEEL, false));
+        }
+        zakje.add(new Blokje(0, Kleur.ZWART, true));
+        zakje.add(new Blokje(0, Kleur.ROOD, true));
+    }
+
+    public Blokje neemRandomBlokje()
+    {
+        Random r = new Random();
+        int i = r.nextInt(zakje.size());
+
+        Blokje b = zakje.get(i);
+        zakje.remove(i);
+
+        return b;
     }
 }
