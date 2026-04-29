@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=Blokje
-comment0.text=\r\n\ class\ Blokje\ -\ geef\ hier\ een\ beschrijving\ van\ deze\ class\r\n\r\n\ @author\ (jouw\ naam)\r\n\ @version\ (versie\ nummer\ of\ datum)\r\n
-comment1.params=
-comment1.target=Blokje()
-comment1.text=\r\n\ Constructor\ voor\ objects\ van\ class\ Blokje\r\n
-comment2.params=y
-comment2.target=int\ voorbeeldMethod(int)
-comment2.text=\r\n\ Voorbeeld\ van\ een\ method\ -\ schrijf\ hier\ jouw\ comment\r\n\r\n\ @param\ \ y\ \ \ \ deze\ method\ krijgt\ deze\ parameter\ mee\ in\ de\ aanroep\r\n\ @return\ \ \ \ deze\ method\ geeft\ de\ som\ van\ x\ en\ y\ terug\r\n
-numComments=3
+comment1.params=waarde\ kleur\ joker
+comment1.target=Blokje(int,\ Kleur,\ boolean)
+comment2.params=
+comment2.target=int\ getWaarde()
+comment3.params=
+comment3.target=Kleur\ getKleur()
+comment4.params=
+comment4.target=boolean\ isJoker()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
