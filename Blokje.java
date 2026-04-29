@@ -1,33 +1,37 @@
-
-/**
- * class Blokje - geef hier een beschrijving van deze class
- *
- * @author (jouw naam)
- * @version (versie nummer of datum)
- */
 public class Blokje
 {
-    // instance variables - vervang deze door jouw variabelen
-    private int x;
+    private int waarde;
+    private Kleur kleur;
+    private boolean joker;
 
-    /**
-     * Constructor voor objects van class Blokje
-     */
-    public Blokje()
+    public Blokje(int waarde, Kleur kleur, boolean joker)
     {
-        // geef de instance variables een beginwaarde
-        x = 0;
+        this.waarde = waarde;
+        this.kleur = kleur;
+        this.joker = joker;
     }
 
-    /**
-     * Voorbeeld van een method - schrijf hier jouw comment
-     *
-     * @param  y    deze method krijgt deze parameter mee in de aanroep
-     * @return    deze method geeft de som van x en y terug
-     */
-    public int voorbeeldMethod(int y)
+    public int getWaarde()
     {
-        // schrijf hier jouw code
-        return x + y;
+        return waarde;
+    }
+
+    public Kleur getKleur()
+    {
+        return kleur;
+    }
+
+    public boolean isJoker()
+    {
+        return joker;
+    }
+
+    @Override
+    public String toString()
+    {
+        if (joker) {
+            return "Joker(" + kleur + ")";
+        }
+        return waarde + "-" + kleur;
     }
 }
