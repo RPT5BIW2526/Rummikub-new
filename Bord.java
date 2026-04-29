@@ -7,8 +7,23 @@ public class Bord{
         blokjes = new ArrayList<Blokje>();
     }
     
-    public ArrayList<Blokjes> getBlokjes(){
+    public ArrayList<Blokje> getBlokjes(){
         return blokjes; 
     }
-    public voegBlokjes
+    
+    public void blokjeToevoegen(Blokje blok){
+        blokjes.add(blok);
+    }
+    
+    public void blokjeVerwijderen(int index){
+        if(index >= 0 && index < blokjes.size()){
+            blokjes.remove(index); 
+        }
+    }
+    
+    public int indexVanBlokje(Blokje blok){
+        return blokjes.indexOf(blok); 
+    }
+    
+    
 }

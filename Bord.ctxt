@@ -2,4 +2,12 @@
 comment0.target=Bord
 comment1.params=
 comment1.target=Bord()
-numComments=2
+comment2.params=
+comment2.target=java.util.ArrayList\ getBlokjes()
+comment3.params=blok
+comment3.target=void\ blokjeToevoegen(Blokje)
+comment4.params=index
+comment4.target=void\ blokjeVerwijderen(int)
+comment5.params=blok
+comment5.target=int\ indexVanBlokje(Blokje)
+numComments=6
