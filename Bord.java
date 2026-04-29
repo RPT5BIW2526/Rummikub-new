@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Bord<Blokjes> {
+public class Bord{
     private ArrayList<Blokje> blokjes;
 
     public Bord()
@@ -7,5 +7,8 @@ public class Bord<Blokjes> {
         blokjes = new ArrayList<Blokje>();
     }
     
-    
+    public ArrayList<Blokjes> getBlokjes(){
+        return blokjes; 
+    }
+    public voegBlokjes
 }
