@@ -1,29 +1,56 @@
 import java.util.ArrayList;
-public class Bord{
+
+/**
+ * De klasse Bord beheert een lijst van Blokje-objecten.
+ * Je kan blokjes toevoegen, verwijderen en opzoeken.
+ */
+public class Bord {
     private ArrayList<Blokje> blokjes;
 
-    public Bord()
-    {
+    /**
+     * Maakt een nieuw leeg bord aan.
+     * De lijst van blokjes start als een lege ArrayList.
+     */
+    public Bord() {
         blokjes = new ArrayList<Blokje>();
     }
-    
-    public ArrayList<Blokje> getBlokjes(){
-        return blokjes; 
+
+    /**
+     * Geeft de volledige lijst van blokjes terug.
+     *
+     * @return een ArrayList met alle blokjes op het bord
+     */
+    public ArrayList<Blokje> getBlokjes() {
+        return blokjes;
     }
-    
-    public void blokjeToevoegen(Blokje blok){
+
+    /**
+     * Voegt een blokje toe aan het bord.
+     *
+     * @param blok het Blokje dat toegevoegd moet worden
+     */
+    public void blokjeToevoegen(Blokje blok) {
         blokjes.add(blok);
     }
-    
-    public void blokjeVerwijderen(int index){
-        if(index >= 0 && index < blokjes.size()){
-            blokjes.remove(index); 
+
+    /**
+     * Verwijdert een blokje op een bepaalde index, als de index geldig is.
+     *
+     * @param index de positie van het blokje dat verwijderd moet worden
+     */
+    public void blokjeVerwijderen(int index) {
+        if (index >= 0 && index < blokjes.size()) {
+            blokjes.remove(index);
         }
     }
-    
-    public int indexVanBlokje(Blokje blok){
-        return blokjes.indexOf(blok); 
+
+    /**
+     * Zoekt de index van een bepaald blokje in de lijst.
+     *
+     * @param blok het Blokje dat gezocht wordt
+     * @return de index van het blokje, of -1 als het niet gevonden wordt
+     */
+    public int indexVanBlokje(Blokje blok) {
+        return blokjes.indexOf(blok);
     }
-    
-    
 }

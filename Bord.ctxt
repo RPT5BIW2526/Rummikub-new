@@ -1,13 +1,19 @@
 #BlueJ class context
 comment0.target=Bord
+comment0.text=\r\n\ De\ klasse\ Bord\ beheert\ een\ lijst\ van\ Blokje-objecten.\r\n\ Je\ kan\ blokjes\ toevoegen,\ verwijderen\ en\ opzoeken.\r\n
 comment1.params=
 comment1.target=Bord()
+comment1.text=\r\n\ Maakt\ een\ nieuw\ leeg\ bord\ aan.\r\n\ De\ lijst\ van\ blokjes\ start\ als\ een\ lege\ ArrayList.\r\n
 comment2.params=
 comment2.target=java.util.ArrayList\ getBlokjes()
+comment2.text=\r\n\ Geeft\ de\ volledige\ lijst\ van\ blokjes\ terug.\r\n\r\n\ @return\ een\ ArrayList\ met\ alle\ blokjes\ op\ het\ bord\r\n
 comment3.params=blok
 comment3.target=void\ blokjeToevoegen(Blokje)
+comment3.text=\r\n\ Voegt\ een\ blokje\ toe\ aan\ het\ bord.\r\n\r\n\ @param\ blok\ het\ Blokje\ dat\ toegevoegd\ moet\ worden\r\n
 comment4.params=index
 comment4.target=void\ blokjeVerwijderen(int)
+comment4.text=\r\n\ Verwijdert\ een\ blokje\ op\ een\ bepaalde\ index,\ als\ de\ index\ geldig\ is.\r\n\r\n\ @param\ index\ de\ positie\ van\ het\ blokje\ dat\ verwijderd\ moet\ worden\r\n
 comment5.params=blok
 comment5.target=int\ indexVanBlokje(Blokje)
+comment5.text=\r\n\ Zoekt\ de\ index\ van\ een\ bepaald\ blokje\ in\ de\ lijst.\r\n\r\n\ @param\ blok\ het\ Blokje\ dat\ gezocht\ wordt\r\n\ @return\ de\ index\ van\ het\ blokje,\ of\ -1\ als\ het\ niet\ gevonden\ wordt\r\n
 numComments=6
