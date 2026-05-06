@@ -5,6 +5,7 @@ dependency1.type=UsesDependency
 dependency2.from=Speler
 dependency2.to=Blokje
 dependency2.type=UsesDependency
+<<<<<<< Updated upstream
 dependency3.from=Bord
 dependency3.to=Blokje
 dependency3.type=UsesDependency
@@ -24,6 +25,24 @@ package.frame.height=737
 package.frame.width=1297
 package.numDependencies=3
 package.numTargets=5
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+objectbench.height=167
+objectbench.width=901
+package.divider.horizontal=0.5997357992073976
+package.divider.vertical=0.7616438356164383
+package.editor.height=549
+package.editor.width=1388
+package.editor.x=0
+package.editor.y=0
+package.frame.height=830
+package.frame.width=1550
+package.numDependencies=2
+package.numTargets=4
+>>>>>>> Stashed changes
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
