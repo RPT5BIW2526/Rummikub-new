@@ -1,4 +1,10 @@
 #BlueJ class context
 comment0.target=Speelveld
 comment0.text=\r\n\ class\ Speelveld\ -\ geef\ hier\ een\ beschrijving\ van\ deze\ class\r\n\r\n\ @author\ (jouw\ naam)\r\n\ @version\ (versie\ nummer\ of\ datum)\r\n
-numComments=1
+comment1.params=rij\ kolom
+comment1.target=boolean\ positieCheck(int,\ int)
+comment2.params=b\ rij\ kolom
+comment2.target=void\ voegBlokjeToe(Blokje,\ int,\ int)
+comment3.params=rij\ kolom
+comment3.target=void\ verwijderBlokje(int,\ int)
+numComments=4
