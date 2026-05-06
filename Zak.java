@@ -36,4 +36,20 @@ public final class Zak {
 
         return b;
     }
+    
+    public int aantalBlokjes()
+    {
+        return zakje.size();
+    }
+    
+    public void deelBlokjesUit(ArrayList<Speler> spelers)
+    {
+        for (int i = 0; i < 14; i++)
+        {
+            for (Speler s : spelers)
+            {
+                s.voegBlokToeBord(neemRandomBlokje());
+            }
+        }
+    }
 }
