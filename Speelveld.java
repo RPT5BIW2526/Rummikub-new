@@ -9,7 +9,7 @@ public class Speelveld
 {
     private Blokje[][] speelveld = new Blokje[15][8];
     private Blokje blokje;
-    
+
     boolean positieCheck(int rij, int kolom){
         boolean positieCorrect = false;
         if(rij >= 0 && rij <= speelveld.length){
@@ -19,27 +19,34 @@ public class Speelveld
         }
         return positieCorrect;
     }
-    
+
     boolean validBlokjeCombo(Blokje nieuwBlokje, int rij , int kolom){
-        boolean valid = false;
-        Blokje vorigeBlokjeRij = speelveld[rij][kolom-1];
-        Blokje volgendBlokjeRij = speelveld[rij][kolom+1];
-        if(positieCheck(rij, kolom)){
-            if(vorigeBlokjeRij != null && volgendBlokjeRij != null){
-                if(vorigeBlokjeRij.getWaarde() == nieuwBlokje.getWaarde() - 1 || volgendBlokjeRij.getWaarde() == nieuwBlokje.getWaarde() + 1 ){
-                   valid = true;
-                }   
+        if(!positieCheck(rij, kolom)) {
+            return false;
+        }
+
+        if(kolom > 0 && speelveld[rij][kolom -1] != null){
+            Blokje vorige = speelveld[rij][kolom - 1];
+            if (vorige.getWaarde() != nieuwBlokje.getWaarde() - 1 || vorige.getKleur() != nieuwBlokje.getKleur()) {
+                return false;
             }
         }
-        return valid;
+        
+        if (kolom < speelveld[0].length - 1 && speelveld[rij][kolom + 1] != null) {
+            Blokje volgende = speelveld[rij][kolom + 1];
+            if (volgende.getWaarde() != nieuwBlokje.getWaarde() + 1 || volgende.getKleur() != nieuwBlokje.getKleur()) {
+                return false;
+            }
+        }
+        return true;
     }
-    
+
     public void voegBlokjeToe(Blokje b, int rij, int kolom){
         if(positieCheck(rij, kolom)){
             speelveld[rij][kolom] = b;
         }
     }
-    
+
     public void verwijderBlokje(int rij, int kolom){
         if(positieCheck(rij, kolom)){
             speelveld[rij][kolom] = null;
