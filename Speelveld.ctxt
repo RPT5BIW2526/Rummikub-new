@@ -8,5 +8,5 @@ comment2.target=boolean\ validBlokjeCombo(Blokje,\ int,\ int)
 comment3.params=b\ rij\ kolom
 comment3.target=void\ voegBlokjeToe(Blokje,\ int,\ int)
 comment4.params=rij\ kolom
-comment4.target=void\ verwijderBlokje(int,\ int)
+comment4.target=Blokje\ verwijderBlokje(int,\ int)
 numComments=5

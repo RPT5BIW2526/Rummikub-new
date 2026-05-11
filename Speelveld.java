@@ -31,11 +31,21 @@ public class Speelveld
                 return false;
             }
         }
-        
-        if (kolom < speelveld[0].length - 1 && speelveld[rij][kolom + 1] != null) {
+
+        if(kolom < speelveld[0].length - 1 && speelveld[rij][kolom + 1] != null) {
             Blokje volgende = speelveld[rij][kolom + 1];
             if (volgende.getWaarde() != nieuwBlokje.getWaarde() + 1 || volgende.getKleur() != nieuwBlokje.getKleur()) {
                 return false;
+            }
+        }
+
+        if(kolom < speelveld[0].length - 1 && speelveld[rij][kolom + 1] != null){
+            Blokje volgende = speelveld[rij][kolom + 1];
+            Blokje vorige = speelveld[rij][kolom - 1];
+            if(volgende.getWaarde() == nieuwBlokje.getWaarde() && vorige.getWaarde() == nieuwBlokje.getWaarde()){
+                if(volgende.getKleur() == nieuwBlokje.getKleur() || vorige.getKleur() == nieuwBlokje.getKleur()){              
+                    return false;
+                }
             }
         }
         return true;
@@ -47,9 +57,10 @@ public class Speelveld
         }
     }
 
-    public void verwijderBlokje(int rij, int kolom){
+    public Blokje verwijderBlokje(int rij, int kolom){
         if(positieCheck(rij, kolom)){
-            speelveld[rij][kolom] = null;
+            return speelveld[rij][kolom];
         }
+        return null;
     }
 }
